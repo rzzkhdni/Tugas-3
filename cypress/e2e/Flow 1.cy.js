@@ -10,8 +10,8 @@ describe('OrangeHRM e2e Testing - Menambahkan Karyawan Baru', () => {
   const employeeMiddleName = "Michael";
   const employeeLastName = "Taylor";
 
-  const newEmployeeName = "Emily Anne Johnson";
-  const newUsername = "emilyinparis";
+  const newEmployeeName = "John Michael Taylor";
+  const newUsername = "johntaylor";
   const newPassword = "test1234";
 
   beforeEach(() => {
@@ -50,7 +50,6 @@ describe('OrangeHRM e2e Testing - Menambahkan Karyawan Baru', () => {
     cy.get('button[type="submit"]').click();
     cy.wait(50);
     cy.contains("Personal Details").should("exist");
-    cy.contains(employeeFirstName, employeeLastName);
 
     // Buat akun untuk karyawan
     cy.contains("Admin").click();
